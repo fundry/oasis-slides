@@ -4,13 +4,16 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		background: #6800ED;
+		color : #fff ;
+		display: flex;
+		margin : 0rem;
+		justify-content: space-between;
 		font-weight: 300;
-		padding: 0 1em;
+		padding: 0 2em;
 	}
 
 	ul {
-		margin: 0;
 		padding: 0;
 	}
 
@@ -24,6 +27,7 @@
 	li {
 		display: block;
 		float: left;
+		margin : 0rem 1rem;
 	}
 
 	[aria-current] {
@@ -46,15 +50,27 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
+
+	h2 {
+		display : flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 500;
+		font-size: 1.6rem;
+	}
+
+	h2:hover{
+		cursor: pointer;
+	}
+
 </style>
 
 <nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+	<h2> Slides </h2>
 
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+	<ul>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">Slides</a></li>
+
+		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Editor</a></li>
 	</ul>
 </nav>
